@@ -1,6 +1,6 @@
 resource "null_resource" "wait_for_kubeconfig" {
   provisioner "local-exec" {
-    command =  "az aks get-credentials --resource-group ${azurerm_resource_group.rg.name} --name ${azurerm_kubernetes_cluster.aks.name}"
+    command =  "az aks get-credentials --resource-group ${azurerm_resource_group.rg.name} --name ${azurerm_kubernetes_cluster.aks.name} --overwrite"
     working_dir = path.module
   }
 }

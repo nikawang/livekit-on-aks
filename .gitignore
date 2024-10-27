@@ -1,0 +1,8 @@
+#ignore terraform relevant files
+*.tfstate
+*.tfstate.backup
+.terraform/
+.terraform.lock.hcl
+
+tool.sh
+certs/
