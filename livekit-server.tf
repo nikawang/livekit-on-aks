@@ -107,4 +107,11 @@ resource "kubernetes_ingress_v1" "lksrv_ingress" {
   }
 }
 
+resource "null_resource" "run_bash_script" {
+  depends_on = [kubernetes_ingress_v1.lksrv_ingress]
+
+  provisioner "local-exec" {
+    command = "bash add-nsg-rule.sh ${azurerm_kubernetes_cluster.aks.node_resource_group}"
+  }
+}
 

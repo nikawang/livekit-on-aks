@@ -1,6 +1,6 @@
 variable "subscription-id" {
   type = string
-  default = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+  default = "xxxx-xxxx-xxxx-xxxx-xxxx"
 }
 
 #virtual network variables
