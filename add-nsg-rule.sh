@@ -13,7 +13,7 @@ az network nsg rule create \
   --name MyCustomInboundRule \
   --priority 111 \
   --source-address-prefixes '*' \
-  --destination-port-ranges 7880,7881,50000-60000 \
+  --destination-port-ranges 7880 7881 50000-60000 \
   --direction Inbound \
   --access Allow \
   --protocol Tcp \
