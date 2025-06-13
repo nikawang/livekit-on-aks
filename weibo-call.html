@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>微博授权回调</title>
+</head>
+<body>
+    <h1>微博授权成功</h1>
+    <p>授权码: <span id="code"></span></p>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code');
+        if (code) {
+            document.getElementById('code').textContent = code;
+            // 可以自动复制到剪贴板
+            navigator.clipboard.writeText(code);
+            alert('授权码已复制到剪贴板: ' + code);
+        }
+    </script>
+</body>
+</html>
